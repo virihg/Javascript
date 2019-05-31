@@ -116,3 +116,27 @@ function errorCatch() {
   } finally {
   }
 }
+// Suma los contenidos de un arreglo de numeros
+let array =[1, 2, 3, 4, 5, 6];
+let array1= [5, 10, 8, 5, 7];
+let reducer = (a, b) => a + b;
+console.log(array.reduce(reducer));
+console.log(array1.reduce(reducer));
+
+// convertir binario a decimal
+
+let binario = window.prompt('Dame un número binario');
+function toDecimal(binario) {
+  let decimal = parseInt(binario, 2);
+  alert(decimal);
+}
+
+function toBinary(decimal) {
+  let binario = decimal.toString(8);
+  alert(binario);
+}
+// regresa los valores que se repiten en los dos arrays
+let arreglo1 = new Set(['Hola', 'Buenas tardes', 'Buenas noches', 'Hasta luego', 'Bye']);
+let arreglo2 = new Set(['Que tal','Hasta luego', 'Hola', 'Bye', 'Cómo estás']);
+let intersection = new Set([...arreglo1].filter(x => !arreglo2.has(x)));
+console.log(intersection);
